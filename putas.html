@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universo de la Programación</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .text-justify-custom {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-gradient-to-tr from-brand-600 to-emerald-400 rounded-xl flex items-center justify-center shadow-lg shadow-brand-500/30 text-white text-2xl font-bold">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">DevUniverse</span>
+                    <span class="block text-xs text-brand-600 font-semibold tracking-wider uppercase">Lenguajes & Tecnología</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#inicio" class="hover:text-brand-600 transition">Inicio</a>
+                <a href="#lenguajes" class="hover:text-brand-600 transition">Lenguajes</a>
+                <a href="#tabla" class="hover:text-brand-600 transition">Comparativa</a>
+                <a href="#contacto" class="hover:text-brand-600 transition">Contacto</a>
+            </nav>
+            <div class="flex items-center">
+                <a href="#tabla" class="bg-brand-600 hover:bg-brand-700 text-white font-medium px-5 py-2.5 rounded-xl shadow-lg shadow-brand-600/20 transition transform hover:-translate-y-0.5">
+                    Ver Tabla
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative overflow-hidden py-20 lg:py-28 bg-gradient-to-b from-white to-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-200 mb-6">
+                    <i class="fa-solid fa-sparkles"></i> El arte de construir el futuro digital
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+                    Explora el Poder de los <span class="bg-gradient-to-r from-brand-600 to-teal-500 bg-clip-text text-transparent">Lenguajes de Programación</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 mb-10 text-justify-custom sm:text-center">
+                    La programación es el idioma universal del mundo moderno. A través de líneas de código estructuradas, transformamos ideas abstractas en aplicaciones dinámicas, sistemas inteligentes y experiencias web inolvidables que conectan a la humanidad.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#lenguajes" class="bg-slate-900 hover:bg-slate-800 text-white font-medium px-8 py-3.5 rounded-xl shadow-xl transition transform hover:-translate-y-0.5">
+                        Conocer Lenguajes
+                    </a>
+                    <a href="#tabla" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-medium px-8 py-3.5 rounded-xl shadow-sm transition">
+                        Ver Comparativa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lenguajes" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Pilares del Desarrollo Moderno</h2>
+                <p class="text-slate-600 text-justify-custom">Cada lenguaje de programación posee virtudes únicas diseñadas para resolver problemáticas específicas del ecosistema digital actual.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- PHP Card -->
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-indigo-500 text-white rounded-xl flex items-center justify-center text-2xl font-bold mb-6 shadow-md shadow-indigo-500/20">
+                            <i class="fa-brands fa-php"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">PHP</h3>
+                        <p class="text-slate-600 text-justify-custom text-sm leading-relaxed mb-6">
+                            PHP es un lenguaje de código abierto muy popular, especialmente adecuado para el desarrollo web y que puede ser incrustado en HTML. Su flexibilidad y robustez impulsan sistemas de gestión de contenidos masivos como WordPress, facilitando la creación de plataformas dinámicas y seguras con una curva de aprendizaje accesible.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 text-xs font-semibold text-indigo-600 uppercase tracking-wider">
+                        Backend & Web Dinámica
+                    </div>
+                </div>
+
+                <!-- JavaScript Card -->
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-amber-500 text-white rounded-xl flex items-center justify-center text-2xl font-bold mb-6 shadow-md shadow-amber-500/20">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">JavaScript</h3>
+                        <p class="text-slate-600 text-justify-custom text-sm leading-relaxed mb-6">
+                            JavaScript es el motor interactivo de la red global. Es un lenguaje interpretado que permite implementar funciones complejas en páginas web, desde animaciones dinámicas hasta aplicaciones web completas del lado del cliente y del servidor (Node.js), convirtiéndose en un estándar indispensable para cualquier desarrollador actual.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 text-xs font-semibold text-amber-600 uppercase tracking-wider">
+                        Interactividad & Fullstack
+                    </div>
+                </div>
+
+                <!-- Python Card -->
+                <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-8 shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-500 text-white rounded-xl flex items-center justify-center text-2xl font-bold mb-6 shadow-md shadow-blue-500/20">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Python</h3>
+                        <p class="text-slate-600 text-justify-custom text-sm leading-relaxed mb-6">
+                            Python destaca por su sintaxis sumamente limpia y legible, similar al idioma inglés. Es el líder indiscutible en campos de vanguardia como la inteligencia artificial, el aprendizaje automático (machine learning), la ciencia de datos y la automatización, permitiendo a los ingenieros desarrollar soluciones potentes con menor cantidad de código.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 text-xs font-semibold text-blue-600 uppercase tracking-wider">
+                        IA, Datos & Versatilidad
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tabla" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Tabla Comparativa de Características</h2>
+                <p class="text-slate-600 text-justify-custom">Un análisis conciso y estructurado que resume el paradigma, uso principal y tipado de cada lenguaje analizado.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-900 text-white text-sm uppercase tracking-wider">
+                                <th class="py-4 px-6 font-semibold">Lenguaje</th>
+                                <th class="py-4 px-6 font-semibold">Paradigma Principal</th>
+                                <th class="py-4 px-6 font-semibold">Ámbito de Aplicación</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-sm text-slate-700">
+                            <tr class="hover:bg-slate-50/80 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 flex items-center gap-3">
+                                    <span class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold">PHP</span>
+                                    PHP
+                                </td>
+                                <td class="py-4 px-6 text-justify-custom">Orientado a objetos e imperativo</td>
+                                <td class="py-4 px-6 text-justify-custom">Desarrollo web del lado del servidor, CMS y portales de comercio electrónico.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 flex items-center gap-3">
+                                    <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold">JS</span>
+                                    JavaScript
+                                </td>
+                                <td class="py-4 px-6 text-justify-custom">Multiparadigma (funcional y prototípico)</td>
+                                <td class="py-4 px-6 text-justify-custom">Interactividad frontend, aplicaciones web en tiempo real y servidores web (Node.js).</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 flex items-center gap-3">
+                                    <span class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold">PY</span>
+                                    Python
+                                </td>
+                                <td class="py-4 px-6 text-justify-custom">Multiparadigma (orientado a objetos y funcional)</td>
+                                <td class="py-4 px-6 text-justify-custom">Inteligencia artificial, ciencia de datos, machine learning y scripting general.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white text-xl font-bold">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <span class="text-white font-bold text-lg">DevUniverse</span>
+            </div>
+            <p class="text-sm text-center md:text-left">
+                &copy; 2026 DevUniverse. Todos los derechos reservados. Diseñado con pasión por la tecnología.
+            </p>
+            <div class="flex space-x-5 text-lg">
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
